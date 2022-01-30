@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.myapplication2"
-        minSdk 27
+        minSdk 24
         targetSdk 30
         versionCode 1
         versionName "1.0"
@@ -29,7 +29,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-}
+    buildFeatures {
+        viewBinding = true
+
+    }
+
+    }
 
 dependencies {
 
@@ -42,4 +47,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
 }
